@@ -1,8 +1,12 @@
 # About this Repo
 
-Honos 2018-03-03 : Adding stunnel to docker-redis
+Honos 2018-03-03 : Adding stunnel to docker-alpine/redis
+Start docker with -v hostdirshared:/data
+hostdirshared containing : stunnel.pem, redisslave.conf
 
-This is the Git repo of the Docker [official image](https://docs.docker.com/docker-hub/official_repos/) for [redis](https://registry.hub.docker.com/_/redis/). See [the Docker Hub page](https://registry.hub.docker.com/_/redis/) for the full readme on how to use this Docker image and for information regarding contributing and issues.
+---
+
+[official image](https://docs.docker.com/docker-hub/official_repos/) for [redis](https://registry.hub.docker.com/_/redis/). See [the Docker Hub page](https://registry.hub.docker.com/_/redis/) for the full readme on how to use this Docker image and for information regarding contributing and issues.
 
 The full readme is generated over in [docker-library/docs](https://github.com/docker-library/docs), specifically in [docker-library/docs/redis](https://github.com/docker-library/docs/tree/master/redis).
 
