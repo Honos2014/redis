@@ -1,7 +1,7 @@
 # About this Repo
 
-Honos 2018-03-03 : Adding stunnel to docker-alpine/redis
-Start docker with -v hostdirshared:/data
+Honos 2018-03-03 : Adding stunnel to docker-alpine/redis \\
+Start docker with -v hostdirshared:/data \\
 hostdirshared containing : stunnel.pem, redisslave.conf
 
 ---
