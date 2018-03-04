@@ -13,7 +13,7 @@ ENV REDIS_DOWNLOAD_SHA ff0c38b8c156319249fec61e5018cf5b5fe63a65b61690bec798f4c99
 # for redis-sentinel see: http://redis.io/topics/sentinel
 RUN set -ex; \
 	\
-	apk add --no-cache --virtual .build-deps \
+	apk update && apk add --no-cache --virtual .build-deps \
 		coreutils \
 		gcc \
 		linux-headers \
@@ -54,7 +54,9 @@ VOLUME /data
 WORKDIR /data
 
 COPY docker-entrypoint.sh /usr/local/bin/
+COPY start.sh /usr/local/bin/
+COPY client.conf /data/
 ENTRYPOINT ["docker-entrypoint.sh"]
 
-EXPOSE 6379 6666
-CMD ["redis-server"]
+EXPOSE 63796 6666
+CMD ["start.sh"]
