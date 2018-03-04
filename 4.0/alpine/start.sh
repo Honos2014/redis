@@ -1,5 +1,4 @@
 #!/bin/sh
 
-stunnel
-ps -ef
+stunnel /data/client.conf
 redis-server
