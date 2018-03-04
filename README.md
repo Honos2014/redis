@@ -4,7 +4,9 @@ Honos 2018-03-03 : Adding stunnel to docker-alpine/redis
 
 
 Start docker with -v hostdirshared:/data
+
 (comment the appropriate COPY lines in dockerfile (stunnelpem ...))
+
 hostdirshared containing : stunnel.pem, redisslave.conf
 
 ---
