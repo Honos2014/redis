@@ -58,5 +58,5 @@ COPY start.sh /usr/local/bin/
 COPY client.conf /data/
 ENTRYPOINT ["docker-entrypoint.sh"]
 
-EXPOSE 63796 6666
+EXPOSE 6379 6666
 CMD ["start.sh"]
