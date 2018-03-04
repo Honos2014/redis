@@ -44,6 +44,11 @@ RUN set -ex; \
 	\
 	apk del .build-deps
 
+RUN set -ex &&\
+    apk update && apk add --update stunnel &&\
+    rm -rf /tmp/* \
+           /var/cache/apk/*
+
 RUN mkdir /data && chown redis:redis /data
 VOLUME /data
 WORKDIR /data
@@ -51,5 +56,5 @@ WORKDIR /data
 COPY docker-entrypoint.sh /usr/local/bin/
 ENTRYPOINT ["docker-entrypoint.sh"]
 
-EXPOSE 6379
+EXPOSE 6379 6666
 CMD ["redis-server"]
