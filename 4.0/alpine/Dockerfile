@@ -55,6 +55,7 @@ WORKDIR /data
 
 COPY docker-entrypoint.sh /usr/local/bin/
 COPY start.sh /usr/local/bin/
+RUN chmod +x /usr/local/bin/start.sh
 COPY client.conf /data/
 ENTRYPOINT ["docker-entrypoint.sh"]
 
