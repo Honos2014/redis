@@ -1,4 +1,4 @@
 #!/bin/sh
 
 stunnel  /data/client.conf
-redis-server
+redis-server /data/redis-slave.conf
