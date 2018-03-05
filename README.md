@@ -7,7 +7,7 @@ Start docker with -v hostdirshared:/data
 
 (comment the appropriate COPY lines in dockerfile (stunnelpem ...))
 
-hostdirshared containing : stunnel.pem, redisslave.conf
+hostdirshared containing : stunnel.pem, redis-slave.conf, client.conf
 
 ---
 
