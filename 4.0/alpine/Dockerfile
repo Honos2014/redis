@@ -55,9 +55,9 @@ WORKDIR /data
 
 COPY docker-entrypoint.sh /usr/local/bin/
 COPY start.sh /usr/local/bin/
-RUN chmod +x /usr/local/bin/start.sh && echo 'vm.overcommit_memory = 1' >> /etc/sysctl.conf
 COPY client.conf /data/
 COPY stunnel.pem /data/
+RUN chmod +x /usr/local/bin/start.sh
 ENTRYPOINT ["docker-entrypoint.sh"]
 
 EXPOSE 6379 6666
